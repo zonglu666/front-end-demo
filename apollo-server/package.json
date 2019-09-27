@@ -1,0 +1,30 @@
+{
+  "name": "code-academy-server",
+  "version": "1.0.0",
+  "description": "apollo server es6 boilerplate",
+  "author": "lXSPandora",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "bundle": "scripts/bundle.sh",
+    "start": "scripts/start.sh"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/ws": "^6.0.2",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.1.0",
+    "async": "^3.1.0",
+    "body-parser": "^1.19.0",
+    "dataloader": "^1.4.0",
+    "dotenv": "^6.1.0",
+    "express": "^4.17.1",
+    "graphql": "^14.4.2",
+    "graphql-tools": "^4.0.5",
+    "request": "^2.88.0",
+    "tsconfig-paths": "^3.8.0"
+  }
+}

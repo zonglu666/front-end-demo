@@ -9,7 +9,7 @@ import "./index.scss";
 import App from "./app";
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:4006/graphql"
+  uri: "http://localhost:4008/graphql"
 });
 
 const client = new ApolloClient({

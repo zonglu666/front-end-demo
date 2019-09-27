@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "allowJs": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "lib": ["esnext"],
+    "paths": {
+      "*": [
+        "node_modules/*",
+        "node_modules/@types/*",
+        "../../@public/@types/*"
+      ],
+      "@public/*": ["../../@public/*/src", "../../@public/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
