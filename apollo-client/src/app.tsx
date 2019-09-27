@@ -8,10 +8,15 @@ const App: React.FC = () => {
       hello
     }
   `);
-  console.log(loading, error, data);
+  console.log("useQuery", loading, error, data);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :</p>;
-  return <h1>{data.hello}</h1>;
+  return (
+    <div>
+      <h1>Hello World!「From Client」</h1>
+      <h1>{data.hello}</h1>
+    </div>
+  );
 };
 
 export default App;

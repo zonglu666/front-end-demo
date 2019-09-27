@@ -41,9 +41,6 @@ client
 // use ApolloProvider to connect your client to React
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <div>
-      <h1>Hello World!「From Client」</h1>
-    </div>
     <App />
   </ApolloProvider>,
   document.getElementById("app")
