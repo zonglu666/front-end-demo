@@ -36,7 +36,7 @@ client
   .query({
     query: GRAPHQL_SCHEMA
   })
-  .then(result => console.log(result));
+  .then(result => console.log("Server fetch", result));
 
 // use ApolloProvider to connect your client to React
 ReactDOM.render(
