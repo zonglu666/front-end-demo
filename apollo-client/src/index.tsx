@@ -1,12 +1,21 @@
-import { ApolloProvider } from "react-apollo";
+import * as serviceWorker from "./serviceWorker";
+// React
+import React from "react";
+import ReactDOM from "react-dom";
+// Create a client
+import { gql } from "apollo-boost";
 import { ApolloClient } from "apollo-client";
 import { createHttpLink } from "apollo-link-http";
 import { InMemoryCache } from "apollo-cache-inmemory";
-import * as serviceWorker from "./serviceWorker";
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.scss";
+// Connect your client to React
+import { ApolloProvider, useQuery } from "react-apollo";
 import App from "./app";
+
+/**
+ * 先启动GraphQL server.
+ * 配置 uri
+ * it defaults to the /graphql endpoint on the same host your app is served from.
+ */
 
 const httpLink = createHttpLink({
   uri: "http://localhost:4008/graphql"
@@ -17,8 +26,24 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
+const GRAPHQL_SCHEMA = gql`
+  {
+    hello
+  }
+`;
+
+client
+  .query({
+    query: GRAPHQL_SCHEMA
+  })
+  .then(result => console.log(result));
+
+// use ApolloProvider to connect your client to React
 ReactDOM.render(
   <ApolloProvider client={client}>
+    <div>
+      <h1>Hello World!「From Client」</h1>
+    </div>
     <App />
   </ApolloProvider>,
   document.getElementById("app")
