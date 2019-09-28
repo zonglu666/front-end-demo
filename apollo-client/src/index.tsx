@@ -22,6 +22,7 @@ const httpLink = createHttpLink({
 });
 
 const client = new ApolloClient({
+  connectToDevTools: true,
   link: httpLink,
   cache: new InMemoryCache()
 });
