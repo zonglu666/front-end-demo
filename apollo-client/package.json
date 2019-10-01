@@ -35,6 +35,8 @@
     "@types/react-router-dom": "^4.3.3",
     "antd": "^3.21.2",
     "apollo-boost": "^0.4.4",
+    "apollo-link-context": "^1.0.9",
+    "apollo-link-http": "^1.5.5",
     "graphql": "^14.4.2",
     "react": "^16.8.6",
     "react-apollo": "^3.0.0",
