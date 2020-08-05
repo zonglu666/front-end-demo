@@ -1,5 +1,5 @@
 // function* foo() {
-//   yield 1;
+//   yield 1;   // yield 产出
 //   yield 2;
 //   yield 3;
 //   yield 4;
@@ -19,7 +19,7 @@
 //   yield 1;
 //   return 2;
 // }
-// var it = foo();
+// var it = foo();  //生成一个iterator, 有next属性
 // console.log(it.next()); // { value:1, done:false }
 // console.log(it.next()); // { value:2, done:true }
 
